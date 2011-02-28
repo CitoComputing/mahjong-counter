@@ -3,3 +3,5 @@ Mahjong Counter - Change Log
 28/02/11
  * Created initial project and structure
  * Added mahjong rules to documentation
+ * Added Sqlite source and makefile
+ * Added main makefile without install
