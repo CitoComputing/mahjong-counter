@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-C -Wall
 LDFLAGS=-lsqlite3 -lpthread -ldl
-SOURCES=main.cpp
+SOURCES=main.cpp Database.cpp
 OBJECTS=$(SOURCES: .cpp=.o)
 EXECUTABLE=mahjong-counter
 
