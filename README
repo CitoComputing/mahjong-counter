@@ -3,3 +3,11 @@ A terminal based counter for the Mahjong board game
 
 Mahjong is an old Chinese board game. It is quite complex and has many rules.
 The initial program will follow Chinese rules with no betting.
+
+== Working Concept ==
+mc init game1 (Create game1 database in working directory)
+mc game1 status (Display the current status, eg scores and who's east wind)
+mc game1 add 2 -Pc --circle (Add a concelled pong to player 2)
+mc game1 reset 4 (Reset player 4's scores this round)
+mc game1 commit (Finish and display current round)
+mc game1 end (End the game and show final scores)
