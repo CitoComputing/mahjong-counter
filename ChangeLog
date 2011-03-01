@@ -5,3 +5,7 @@ Mahjong Counter - Change Log
  * Added mahjong rules to documentation
  * Added Sqlite source and makefile
  * Added main makefile without install
+
+01/02/11
+ * Added Database class
+ * Added basic init command and class
