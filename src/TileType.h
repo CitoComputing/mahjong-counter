@@ -17,6 +17,6 @@ enum SetType
 {
 	blank,
 	pung,
-	chi,
+	chow,
 	kong
 };
