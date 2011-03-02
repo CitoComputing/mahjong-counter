@@ -1,5 +1,6 @@
 enum TileType
 {
+	blank,
 	bamboo,
 	character,
 	circle,
@@ -12,21 +13,9 @@ enum TileType
 	white
 };
 
-enum SeasonType
-{
-	fNorth,
-	fSouth,
-	fEast,
-	fWest,
-
-	sNorth,
-	sSouth,
-	sEast,
-	sWest
-};
-
 enum SetType
 {
+	blank,
 	pung,
 	chi,
 	kong
