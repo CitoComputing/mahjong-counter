@@ -136,3 +136,91 @@ bool TileSet::set(const int& argc, char* argv[])
 		// Error: Invalid amount of commands
 	}
 }
+
+std::string TileSet::toString()
+{
+	std::string str = "";
+	switch(tileType)
+	{
+		case tileBlank:
+			str += "Type: Blank";
+			break;
+		case bamboo:
+			str += "Type: Bamboo";
+			break;
+		case character:
+			str += "Type: Character";
+			break;
+		case circle:
+			str += "Type: Circle";
+			break;
+		case east:
+			str += "Type: East Wind";
+			break;
+		case west:
+			str += "Type: West Wind";
+			break;
+		case north:
+			str += "Type: North Wind";
+			break;
+		case south:
+			str += "Type: South Wind";
+			break;
+		case red:
+			str += "Type: Red Dragon";
+			break;
+		case green:
+			str += "Type: Green Dragon";
+			break;
+		case white:
+			str += "Type: White Dragon";
+			break;
+	}
+
+	switch(setType)
+	{
+		case setBlank:
+			str += " and Set Type: Blank";
+			str += '\n';
+			break;
+		case pung:
+			str += " and Set Type: Pung";
+			str += '\n';
+			break;
+		case chow:
+			str += " and Set Type: Chow";
+			str += '\n';
+			break;
+		case kong:
+			str += " and Set Type: Kong";
+			str += '\n';
+			break;
+		case doub:
+			str += " and Set Type: Double";
+			str += '\n';
+			break;
+	}
+
+	str += "It has the following flower tiles: ";
+
+	if(s1)
+		str += "Season 1 ";
+	if(s2)
+		str += "Season 2 ";
+	if(s3)
+		str += "Season 3 ";
+	if(s4)
+		str += "Season 4 ";
+
+	if(f1)
+		str += "Flower 1 ";
+	if(f2)
+		str += "Flower 2 ";
+	if(f3)
+		str += "Flower 3 ";
+	if(f4)
+		str += "Flower 4 ";
+
+	str += '\n';
+	return str;
+}

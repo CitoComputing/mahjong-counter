@@ -1,3 +1,4 @@
+#include <string>
 #include "TileType.h"
 
 class TileSet
@@ -5,6 +6,7 @@ class TileSet
 public:
 	TileSet();
 	bool set(const int& argc, char* argv[]);
+	std::string toString(); // Testing purpose
 private:
 	TileType tileType;
 	SetType setType;
