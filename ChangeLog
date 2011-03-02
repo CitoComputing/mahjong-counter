@@ -9,3 +9,5 @@ Mahjong Counter - Change Log
 01/02/11
  * Added Database class
  * Added basic init command and class
+ * Added basic add command
+ * Added the TileSet class and TileType enums
