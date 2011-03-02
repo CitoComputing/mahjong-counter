@@ -32,7 +32,22 @@ int main(int argc, char* argv[])
 	{
 		if(strcmp(argv[2], "add") == 0)
 		{
-			// Proccess add score eg mc game1 add 3 --circle -Pc
+			char dbName[50];
+			strcpy(dbName, argv[1]);
+			strcat(dbName, ".db");
+			Database* db = new Database(dbName);
+
+			TileSet setTest;
+			setTest.set(argc, argv);
+			cout << setTest.toString() << endl;
+
+			// Player number check
+			// if(strcmp(argv[3], "1") == 0))
+			// if(strcmp(argv[3], "2") == 0))
+			// if(strcmp(argv[3], "3") == 0))
+			// if(strcmp(argv[3], "4") == 0))
+
+			delete db;
 		}
 	}
 
