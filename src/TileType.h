@@ -1,6 +1,6 @@
 enum TileType
 {
-	blank,
+	tileBlank,
 	bamboo,
 	character,
 	circle,
@@ -15,8 +15,9 @@ enum TileType
 
 enum SetType
 {
-	blank,
+	setBlank,
 	pung,
 	chow,
-	kong
+	kong,
+	doub
 };

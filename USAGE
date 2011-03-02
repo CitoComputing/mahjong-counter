@@ -5,7 +5,7 @@ USAGE:
 	[dbname] commit
 	[dbname] end
 	[dbname] add [playerno]
-		-PKC (Pung, Kong, Chow)
+		-PKCD (Pung, Kong, Chow, Double)
 		-ctk (Concealed Pung, Terminal, Concealed Kong)
 		--f1 --s2 (flower 1, flower 2)
 		--circle --bamboo --character --east --west --north --south --red --green --white (Tile type)
