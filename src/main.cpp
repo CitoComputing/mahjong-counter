@@ -3,12 +3,13 @@
 #include <string.h>
 
 #include "actionInit.h"
+#include "TileSet.h"
 #include "Database.h"
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	if(argc > 2)
+	if(argc > 3)
 	{
 		if(strcmp(argv[1], "init") == 0)
 		{
@@ -20,6 +21,18 @@ int main(int argc, char* argv[])
 			Init* handler = new Init(db);
 
 			handler->run();
+
+			delete db;
+			delete handler;
+		}
+
+	}
+
+	if(argc > 5)
+	{
+		if(strcmp(argv[2], "add") == 0)
+		{
+			// Proccess add score eg mc game1 add 3 --circle -Pc
 		}
 	}
 
