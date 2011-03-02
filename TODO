@@ -1,0 +1,5 @@
+Mahjong-Counter TODO
+
+02/03/11
+ * Check if the Database exists when calling add
+ * Fill player when calling add
