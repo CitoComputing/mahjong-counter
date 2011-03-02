@@ -110,7 +110,7 @@ bool TileSet::set(const int& argc, char* argv[])
 					strncpy(command, argv[i] + 1, strlen(argv[i]) - 1); // Get the string without --
 					command[strlen(argv[i]) - 1] = '\0'; // Add terminator
 
-					for(int i = 0; i < strlen(command); i++)
+					for(int i = 0; i < (signed int)strlen(command); i++)
 					{
 						// Pung, Chow, Kong and Double
 						if(strcmp(command, "P") == 0)
@@ -134,7 +134,10 @@ bool TileSet::set(const int& argc, char* argv[])
 		}
 	} else {
 		// Error: Invalid amount of commands
+		return false;
 	}
+
+	return true;
 }
 
 std::string TileSet::toString()
