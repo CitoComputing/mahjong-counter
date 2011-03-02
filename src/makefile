@@ -1,17 +1,24 @@
-CC=g++
-CFLAGS=-C -Wall
+CXX=g++
+CXXFLAGS=-c -Wall
 LDFLAGS=-lsqlite3 -lpthread -ldl
-SOURCES=main.cpp Database.cpp actionInit.cpp TileSet.cpp Player.cpp
-OBJECTS=$(SOURCES: .cpp=.o)
-EXECUTABLE=mahjong-counter
 
-all: $(SOURCES) $(EXECUTABLE)
+OBJ_DIR = obj
+BIN_DIR = bin
+EXECUTABLE = mahjong-counter
+
+SOURCES = main.cpp Database.cpp actionInit.cpp TileSet.cpp Player.cpp
+OBJECTS = $(SOURCES:%.cpp=$(OBJ_DIR)/%.o)
+
+all: dirs $(OBJECTS) $(EXECUTABLE)
+
+dirs:
+	mkdir -p $(OBJ_DIR)
 
 $(EXECUTABLE): $(OBJECTS)
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+	$(CXX) $(LDFLAGS) $(OBJECTS) -o  $(EXECUTABLE)
 
-.cpp.o:
-	$(CC) $(CFLAGS) $< -o $@
+$(OBJ_DIR)/%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
-	rm $(EXECUTABLE) $(OBJECTS) 
+	rm obj/*
