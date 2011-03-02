@@ -7,6 +7,10 @@ TileSet::TileSet()
 	// Set allow season tiles to false
 	f1 = false; f2 = false; f3 = false; f4 = false;
 	s1 = false; s2 = false; s3 = false; s4 = false;
+
+	// Set enums to blank
+	tileType = tileBlank;
+	setType = setBlank;
 }
 
 bool TileSet::set(const int& argc, char* argv[])
@@ -32,7 +36,62 @@ bool TileSet::set(const int& argc, char* argv[])
 					strncpy(command, argv[i] + 2, strlen(argv[i]) - 2); // Get the string without --
 					command[strlen(argv[i]) - 2] = '\0'; // Add terminator
 
-					// command is the command to be proccessed for -- eg circle
+					// Main Tile Types
+					if(strcmp(command, "circle") == 0)
+						tileType = circle;
+
+					if(strcmp(command, "bamboo") == 0)
+						tileType = bamboo;
+
+					if(strcmp(command, "character") == 0)
+						tileType = character;
+
+					if(strcmp(command, "east") == 0)
+						tileType = east;
+
+					if(strcmp(command, "west") == 0)
+						tileType = west;
+
+					if(strcmp(command, "north") == 0)
+						tileType = north;
+
+					if(strcmp(command, "south") == 0)
+						tileType = south;
+
+					if(strcmp(command, "red") == 0)
+						tileType = red;
+
+					if(strcmp(command, "green") == 0)
+						tileType = green;
+
+					if(strcmp(command, "white") == 0)
+						tileType = white;
+
+					// Flowers --f1 (flower 1) or --b1 (blue 1)
+					if(strcmp(command, "f1") == 0 or strcmp(command, "b1") == 0)
+						f1 = true;
+
+					if(strcmp(command, "f2") == 0 or strcmp(command, "b2") == 0)
+						f2 = true;
+
+					if(strcmp(command, "f3") == 0 or strcmp(command, "b3") == 0)
+						f3 = true;
+
+					if(strcmp(command, "f4") == 0 or strcmp(command, "b4") == 0)
+						f4 = true;
+
+					// Seasons --s1 (season 1) or --r1 (red 1)
+					if(strcmp(command, "s1") == 0 or strcmp(command, "r1") == 0)
+						s1 = true;
+
+					if(strcmp(command, "s2") == 0 or strcmp(command, "r2") == 0)
+						s2 = true;
+
+					if(strcmp(command, "s3") == 0 or strcmp(command, "r3") == 0)
+						s3 = true;
+
+					if(strcmp(command, "s4") == 0 or strcmp(command, "r4") == 0)
+						s4 = true;
 
 					delete command;
 				}
@@ -51,7 +110,21 @@ bool TileSet::set(const int& argc, char* argv[])
 					strncpy(command, argv[i] + 1, strlen(argv[i]) - 1); // Get the string without --
 					command[strlen(argv[i]) - 1] = '\0'; // Add terminator
 
-					// command is the command to be proccessed for - eg pong
+					for(int i = 0; i < strlen(command); i++)
+					{
+						// Pung, Chow, Kong and Double
+						if(strcmp(command, "P") == 0)
+							setType = pung;
+
+						if(strcmp(command, "C") == 0)
+							setType = chow;
+
+						if(strcmp(command, "K") == 0)
+							setType = kong;
+
+						if(strcmp(command, "D") == 0)
+							setType = doub;
+					}
 
 					delete command;
 
