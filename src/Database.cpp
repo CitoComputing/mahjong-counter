@@ -1,7 +1,7 @@
 #include "Database.h"
 #include <iostream>
 
-Database::Database(char* filename)
+Database::Database(const char* filename)
 {
 	database = NULL;
 	open(filename);
@@ -11,7 +11,7 @@ Database::~Database()
 {
 }
 
-bool Database::open(char* filename)
+bool Database::open(const char* filename)
 {
 	if(sqlite3_open(filename, &database) == SQLITE_OK)
 		return true;
@@ -19,7 +19,7 @@ bool Database::open(char* filename)
 	return false;   
 }
 
-vector<vector<string> > Database::query(char* query)
+vector<vector<string> > Database::query(const char* query)
 {
 	sqlite3_stmt *statement;
 	vector<vector<string> > results;

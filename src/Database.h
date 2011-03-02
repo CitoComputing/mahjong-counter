@@ -10,11 +10,11 @@ using namespace std;
 class Database
 {
 public:
-	Database(char* filename);
+	Database(const char* filename);
 	~Database();
 	
-	bool open(char* filename);
-	vector<vector<string> > query(char* query);
+	bool open(const char* filename);
+	vector<vector<string> > query(const char* query);
 	void close();
 	
 private:
