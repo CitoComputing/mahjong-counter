@@ -9,46 +9,39 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	if(argc > 3)
+	if(argc >= 3 && strcmp(argv[1], "init") == 0)
 	{
-		if(strcmp(argv[1], "init") == 0)
-		{
-			char dbName[50];
-			strcpy(dbName, argv[2]);
-			strcat(dbName, ".db");
+		char dbName[50];
+		strcpy(dbName, argv[2]);
+		strcat(dbName, ".db");
 
-			Database* db = new Database(dbName);
-			Init* handler = new Init(db);
+		Database* db = new Database(dbName);
+		Init* handler = new Init(db);
 
-			handler->run();
+		handler->run();
 
-			delete db;
-			delete handler;
-		}
-
+		delete db;
+		delete handler;
 	}
 
-	if(argc > 5)
+	if(argc >= 5 && strcmp(argv[2], "add") == 0)
 	{
-		if(strcmp(argv[2], "add") == 0)
-		{
-			char dbName[50];
-			strcpy(dbName, argv[1]);
-			strcat(dbName, ".db");
-			Database* db = new Database(dbName);
+		char dbName[50];
+		strcpy(dbName, argv[1]);
+		strcat(dbName, ".db");
+		Database* db = new Database(dbName);
 
-			TileSet setTest;
-			setTest.set(argc, argv);
-			cout << setTest.toString() << endl;
+		TileSet setTest;
+		setTest.set(argc, argv);
+		cout << setTest.toString() << endl;
 
-			// Player number check
-			// if(strcmp(argv[3], "1") == 0))
-			// if(strcmp(argv[3], "2") == 0))
-			// if(strcmp(argv[3], "3") == 0))
-			// if(strcmp(argv[3], "4") == 0))
+		// Player number check
+		// if(strcmp(argv[3], "1") == 0))
+		// if(strcmp(argv[3], "2") == 0))
+		// if(strcmp(argv[3], "3") == 0))
+		// if(strcmp(argv[3], "4") == 0))
 
-			delete db;
-		}
+		delete db;
 	}
 
 	return 0;
