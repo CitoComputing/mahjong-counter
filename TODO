@@ -6,3 +6,7 @@ Mahjong-Counter TODO
 
 03/03/11
  * Create a root class called Game for the main function | done
+
+04/03/11
+ * Finish save function
+ * Finish USAGE functions
