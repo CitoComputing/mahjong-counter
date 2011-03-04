@@ -1,3 +1,6 @@
+#ifndef __TILETYPE_H
+#define __TILETYPE_H
+
 enum TileType
 {
 	tileBlank,
@@ -21,3 +24,5 @@ enum SetType
 	kong,
 	doub
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef __ACTIONINIT_H
+#define __ACTIONINIT_H
+
 #include <string>
 #include "Database.h"
 
@@ -9,3 +12,5 @@ public:
 private:
 	Database* db;
 };
+
+#endif

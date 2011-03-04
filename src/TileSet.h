@@ -1,3 +1,6 @@
+#ifndef __TILESET_H
+#define __TILESET_H
+
 #include <string>
 #include "TileType.h"
 
@@ -13,3 +16,5 @@ private:
 	bool s1, s2, s3, s4;
 	bool f1, f2, f3, f4;
 };
+
+#endif

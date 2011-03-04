@@ -1,3 +1,6 @@
+#ifndef __PLAYER_H
+#define __PLAYER_H
+
 #include "Database.h"
 #include "TileSet.h"
 
@@ -20,3 +23,5 @@ private:
 	TileSet* set1; TileSet* set2; TileSet* set3; TileSet* set4;
 	TileSet* set5; TileSet* set6; TileSet* set7; TileSet* set8; // Pungs, Chows, Kongs or Doubles
 };
+
+#endif
