@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Player.h"
+#include "Counter.h"
 
 Player::Player(Database* db)
 {
@@ -66,8 +67,19 @@ void Player::push(const int& argc, char* argv[])
 
 bool Player::commit()
 {
-	// Add score too running total and then reset
-	return true;
+	Counter counter(this);
+	bool isOk = false;
+
+	int score = counter.getScore(isOk);
+
+	if(isOk)
+	{
+		runningScore = score;
+		reset();
+		return true;
+	}
+
+	return false;
 }
 
 void Player::load()
@@ -100,7 +112,7 @@ TileSet* Player::get(int i)
 	return 0;
 }
 
-void save()
+void Player::save()
 {
 }
 
