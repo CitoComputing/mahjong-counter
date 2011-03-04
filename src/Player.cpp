@@ -56,6 +56,17 @@ void Player::push(const int& argc, char* argv[])
 	}
 }
 
+bool Player::commit()
+{
+	// Add score too running total and then reset
+	return true;
+}
+
+void Player::load()
+{
+	// Load from database
+}
+
 TileSet* Player::get(int i)
 {
 	switch(setNo)

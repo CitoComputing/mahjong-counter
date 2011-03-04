@@ -8,6 +8,8 @@ public:
 	~Player();
 	void reset();
 	void push(const int& argc, char* argv[]);
+	bool commit();
+	void load();
 	TileSet* get(int i);
 	const int& count();
 
