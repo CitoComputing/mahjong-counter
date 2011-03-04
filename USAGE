@@ -1,6 +1,6 @@
 USAGE:
 	init [dbname]
-	[dbname] status
+	[dbname] stat
 	[dbname] reset [playerno]
 	[dbname] commit
 	[dbname] end
