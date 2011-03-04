@@ -21,7 +21,7 @@ void Player::reset()
 	set5 = new TileSet(); set6 = new TileSet(); set7 = new TileSet(); set8 = new TileSet();
 }
 
-void Player::setSet(const int& argc, char* argv[])
+void Player::push(const int& argc, char* argv[])
 {
 	switch(setNo)
 	{
@@ -55,7 +55,7 @@ void Player::setSet(const int& argc, char* argv[])
 	}
 }
 
-TileSet* Player::getSet(int i)
+TileSet* Player::get(int i)
 {
 	switch(setNo)
 	{
@@ -80,7 +80,7 @@ TileSet* Player::getSet(int i)
 	return 0;
 }
 
-const int& Player::getSetCount()
+const int& Player::count()
 {
 	return setNo;
 }

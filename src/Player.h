@@ -7,9 +7,9 @@ public:
 	Player(Database* db);
 	~Player();
 	void reset();
-	void setSet(const int& argc, char* argv[]);
-	TileSet* getSet(int i);
-	const int& getSetCount();
+	void push(const int& argc, char* argv[]);
+	TileSet* get(int i);
+	const int& count();
 private:
 	Database* db;
 	int setNo; // The last set filled
