@@ -15,6 +15,7 @@ public:
 	void load();
 	TileSet* get(int i);
 	const int& count();
+	void save();
 
 	int runningScore; // The score of the whole game
 private:

@@ -25,6 +25,10 @@ void Game::end()
 void Game::save()
 {
 	// Save to db
+	p1->save();
+	p2->save();
+	p3->save();
+	p4->save();
 }
 
 std::string Game::status()

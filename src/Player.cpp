@@ -100,6 +100,10 @@ TileSet* Player::get(int i)
 	return 0;
 }
 
+void save()
+{
+}
+
 const int& Player::count()
 {
 	return setNo;
