@@ -6,7 +6,7 @@ OBJ_DIR = obj
 BIN_DIR = bin
 EXECUTABLE = mahjong-counter
 
-SOURCES = main.cpp Database.cpp actionInit.cpp TileSet.cpp Player.cpp
+SOURCES = main.cpp Database.cpp actionInit.cpp TileSet.cpp Player.cpp Game.cpp
 OBJECTS = $(SOURCES:%.cpp=$(OBJ_DIR)/%.o)
 
 all: dirs $(OBJECTS) $(EXECUTABLE)
