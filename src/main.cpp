@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 {
 	if(argc >= 3 && strcmp(argv[1], "init") == 0)
 	{
-		Database* db = new Database(dbName);
+		Database* db = new Database(argv[2]);
 		Init* handler = new Init(db);
 
 		handler->run();
@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
 
 	if(argc >= 5 && strcmp(argv[2], "add") == 0)
 	{
-		Database* db = new Database(dbName);
+		Database* db = new Database(argv[1]);
 
 		TileSet setTest;
 		setTest.set(argc, argv);
