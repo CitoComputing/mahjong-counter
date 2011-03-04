@@ -5,4 +5,4 @@ Mahjong-Counter TODO
  * Fill player when calling add
 
 03/03/11
- * Create a root class called Game for the main function
+ * Create a root class called Game for the main function | done
