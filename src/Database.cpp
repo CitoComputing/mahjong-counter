@@ -1,5 +1,7 @@
 #include "Database.h"
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 
 Database::Database(const char* filename)
 {
@@ -13,9 +15,17 @@ Database::~Database()
 
 bool Database::open(const char* filename)
 {
-	if(sqlite3_open(filename, &database) == SQLITE_OK)
+	char* finalName = new char[strlen(filename) + 2];
+	strcpy(finalName, filename);
+	strcat(finalName, ".db");
+
+	if(sqlite3_open(finalName, &database) == SQLITE_OK)
+	{
+		delete finalName;
 		return true;
-		
+	}
+
+	delete finalName;
 	return false;   
 }
 

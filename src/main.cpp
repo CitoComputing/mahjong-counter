@@ -11,10 +11,6 @@ int main(int argc, char* argv[])
 {
 	if(argc >= 3 && strcmp(argv[1], "init") == 0)
 	{
-		char dbName[50];
-		strcpy(dbName, argv[2]);
-		strcat(dbName, ".db");
-
 		Database* db = new Database(dbName);
 		Init* handler = new Init(db);
 
@@ -26,9 +22,6 @@ int main(int argc, char* argv[])
 
 	if(argc >= 5 && strcmp(argv[2], "add") == 0)
 	{
-		char dbName[50];
-		strcpy(dbName, argv[1]);
-		strcat(dbName, ".db");
 		Database* db = new Database(dbName);
 
 		TileSet setTest;
