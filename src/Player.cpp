@@ -5,6 +5,7 @@ Player::Player(Database* db)
 {
 	this->db = db;
 	reset(); // Initialize all variables
+	runningScore = 0;
 }
 
 Player::~Player()

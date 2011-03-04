@@ -10,6 +10,8 @@ public:
 	void push(const int& argc, char* argv[]);
 	TileSet* get(int i);
 	const int& count();
+
+	int runningScore; // The score of the whole game
 private:
 	Database* db;
 	int setNo; // The last set filled
