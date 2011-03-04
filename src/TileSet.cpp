@@ -113,16 +113,16 @@ bool TileSet::set(const int& argc, char* argv[])
 					for(int i = 0; i < (signed int)strlen(command); i++)
 					{
 						// Pung, Chow, Kong and Double
-						if(strcmp(command, "P") == 0)
+						if(command[i] == 'P')
 							setType = pung;
 
-						if(strcmp(command, "C") == 0)
+						if(command[i] == 'C')
 							setType = chow;
 
-						if(strcmp(command, "K") == 0)
+						if(command[i] == 'K')
 							setType = kong;
 
-						if(strcmp(command, "D") == 0)
+						if(command[i] == 'D')
 							setType = doub;
 					}
 
