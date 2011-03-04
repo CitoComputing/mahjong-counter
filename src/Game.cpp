@@ -5,8 +5,7 @@ Game::Game(Database* db)
 	this->db = db;
 	p1 = new Player(db); p2 = new Player(db); p3 = new Player(db); p4 = new Player(db);
 
-	// Load all players from database
-	p1->load(); p2->load(); p3->load(); p4->load();
+	load();
 }
 
 void Game::commit()
@@ -20,6 +19,12 @@ void Game::commit()
 void Game::end()
 {
 	// Display scores
+}
+
+void Game::load()
+{
+	// Load all players from database
+	p1->load(); p2->load(); p3->load(); p4->load();
 }
 
 void Game::save()
