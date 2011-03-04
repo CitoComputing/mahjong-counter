@@ -5,6 +5,7 @@
 #include "actionInit.h"
 #include "TileSet.h"
 #include "Database.h"
+#include "Game.h"
 using namespace std;
 
 int main(int argc, char* argv[])
@@ -24,15 +25,32 @@ int main(int argc, char* argv[])
 	{
 		Database* db = new Database(argv[1]);
 
-		TileSet setTest;
-		setTest.set(argc, argv);
-		cout << setTest.toString() << endl;
+		Game game(db);
 
 		// Player number check
-		// if(strcmp(argv[3], "1") == 0))
-		// if(strcmp(argv[3], "2") == 0))
-		// if(strcmp(argv[3], "3") == 0))
-		// if(strcmp(argv[3], "4") == 0))
+		if(strcmp(argv[3], "1") == 0)
+		{
+			game.p1->push(argc, argv);
+			cout << game.p1->get(game.p1->count() - 1)->toString();
+		}
+
+		if(strcmp(argv[3], "2") == 0)
+		{
+			game.p2->push(argc, argv);
+			cout << game.p2->get(game.p2->count() - 1)->toString();
+		}
+
+		if(strcmp(argv[3], "3") == 0)
+		{
+			game.p3->push(argc, argv);
+			cout << game.p3->get(game.p3->count() - 1)->toString();
+		}
+
+		if(strcmp(argv[3], "4") == 0)
+		{
+			game.p4->push(argc, argv);
+			cout << game.p4->get(game.p4->count() - 1)->toString();
+		}
 
 		delete db;
 	}
