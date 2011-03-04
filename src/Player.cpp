@@ -28,31 +28,39 @@ void Player::push(const int& argc, char* argv[])
 	{
 		case 0:
 			set1->set(argc, argv);
+			setNo++;
 			break;
 		case 1:
 			set2->set(argc, argv);
+			setNo++;
 			break;
 		case 2:
 			set3->set(argc, argv);
+			setNo++;
 			break;
 		case 3:
 			set4->set(argc, argv);
+			setNo++;
 			break;
 		case 4:
 			set5->set(argc, argv);
+			setNo++;
 			break;
 		case 5:
 			set6->set(argc, argv);
+			setNo++;
 			break;
 		case 6:
 			set7->set(argc, argv);
+			setNo++;
 			break;
 		case 7:
 			set8->set(argc, argv);
+			setNo++;
 			break;
 		case 8:
 			std::cout << "Too many sets! Please reset this player before adding more!" << std::endl;
-			return;
+			break;
 	}
 }
 
@@ -69,7 +77,7 @@ void Player::load()
 
 TileSet* Player::get(int i)
 {
-	switch(setNo)
+	switch(i)
 	{
 		case 0:
 			return set1;
