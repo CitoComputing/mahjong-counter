@@ -21,3 +21,13 @@ void Game::end()
 {
 	// Display scores
 }
+
+void Game::save()
+{
+	// Save to db
+}
+
+std::string Game::status()
+{
+	return "Status";
+}
