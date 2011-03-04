@@ -4,6 +4,8 @@ Game::Game(Database* db)
 {
 	this->db = db;
 	p1 = new Player(db); p2 = new Player(db); p3 = new Player(db); p4 = new Player(db);
+	pWind = east;
+	playerEast = 1;
 
 	load();
 }
