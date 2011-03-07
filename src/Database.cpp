@@ -21,11 +21,11 @@ bool Database::open(const char* filename)
 
 	if(sqlite3_open(finalName, &database) == SQLITE_OK)
 	{
-		delete finalName;
+		delete[] finalName;
 		return true;
 	}
 
-	delete finalName;
+	delete[] finalName;
 	return false;   
 }
 

@@ -93,7 +93,7 @@ bool TileSet::set(const int& argc, char* argv[])
 					if(strcmp(command, "s4") == 0 or strcmp(command, "r4") == 0)
 						s4 = true;
 
-					delete command;
+					delete[] command;
 				}
 			}
 
@@ -126,7 +126,7 @@ bool TileSet::set(const int& argc, char* argv[])
 							setType = doub;
 					}
 
-					delete command;
+					delete[] command;
 
 				}
 			} else { // Error: It is only 1 char
